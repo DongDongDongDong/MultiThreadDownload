@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="45" id="Dn3-ia-Zb4" customClass="DownListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dn3-ia-Zb4" id="DHy-Yv-CZ6">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AeB-HY-49w">
+                        <rect key="frame" x="18" y="4" width="247" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nys-s2-pAH">
+                        <rect key="frame" x="238" y="22" width="33" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="XUe-gr-1c4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" tag="11111" contentMode="scaleToFill" restorationIdentifier="OBDLISECELL" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hd2-LG-Mtt">
+                        <rect key="frame" x="275" y="10" width="22" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Hd2-LG-Mtt" secondAttribute="height" multiplier="1:1" id="bLc-cb-7Wg"/>
+                        </constraints>
+                        <state key="normal" title="下载" backgroundImage="未下载.png">
+                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="btnDidClick:" destination="Dn3-ia-Zb4" eventType="touchUpInside" id="SOJ-ie-7Jz"/>
+                        </connections>
+                    </button>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gHb-oO-aa7">
+                        <rect key="frame" x="18" y="37" width="284" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="oUZ-go-K81"/>
+                        </constraints>
+                    </progressView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AeB-HY-49w" firstAttribute="leading" secondItem="DHy-Yv-CZ6" secondAttribute="leadingMargin" constant="10" id="4Ve-Km-IH3"/>
+                    <constraint firstItem="gHb-oO-aa7" firstAttribute="leading" secondItem="DHy-Yv-CZ6" secondAttribute="leadingMargin" constant="10" id="FQP-1c-j2w"/>
+                    <constraint firstItem="gHb-oO-aa7" firstAttribute="top" secondItem="AeB-HY-49w" secondAttribute="bottom" constant="15" id="J6S-cp-xHn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Hd2-LG-Mtt" secondAttribute="trailing" constant="15" id="LYY-C1-l4B"/>
+                    <constraint firstItem="Hd2-LG-Mtt" firstAttribute="top" secondItem="DHy-Yv-CZ6" secondAttribute="topMargin" constant="2" id="VDK-6z-5Jl"/>
+                    <constraint firstItem="Hd2-LG-Mtt" firstAttribute="leading" secondItem="AeB-HY-49w" secondAttribute="trailing" constant="10" id="daE-Am-bjA"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="gHb-oO-aa7" secondAttribute="trailing" constant="10" id="eox-ql-u6B"/>
+                    <constraint firstItem="gHb-oO-aa7" firstAttribute="top" secondItem="Nys-s2-pAH" secondAttribute="bottom" constant="1" id="lCr-FN-oUW"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="gHb-oO-aa7" secondAttribute="bottom" constant="-3" id="lYh-IF-Hwn"/>
+                    <constraint firstItem="gHb-oO-aa7" firstAttribute="top" secondItem="Hd2-LG-Mtt" secondAttribute="bottom" constant="5" id="mJM-hx-6au"/>
+                    <constraint firstItem="Hd2-LG-Mtt" firstAttribute="leading" secondItem="Nys-s2-pAH" secondAttribute="trailing" constant="4" id="tiF-E7-Nf0"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="brandSize" destination="Nys-s2-pAH" id="Ioo-gI-E98"/>
+                <outlet property="brandTitle" destination="AeB-HY-49w" id="ttu-1b-BNh"/>
+                <outlet property="downloadBtn" destination="Hd2-LG-Mtt" id="oNi-zW-8wY"/>
+                <outlet property="downloadProgress" destination="gHb-oO-aa7" id="mDl-h3-mDC"/>
+            </connections>
+            <point key="canvasLocation" x="-224" y="690.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="未下载.png" width="21" height="21"/>
+    </resources>
+</document>

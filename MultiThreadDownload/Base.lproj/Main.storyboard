@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3iC-ks-X6k">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Download List-->
+        <scene sceneID="cht-sh-wpZ">
+            <objects>
+                <viewController storyboardIdentifier="OBDDownloadList_ID" id="27W-Hg-Oe5" customClass="OBDDownloadList" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F6g-m5-ETf"/>
+                        <viewControllerLayoutGuide type="bottom" id="mcr-nj-oCa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OeA-04-WYg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yMa-FN-SYf">
+                                <rect key="frame" x="10" y="30" width="300" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MVz-Vv-mxV"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="品牌下载"/>
+                                    <segment title="已下载"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ois-MT-Y0I">
+                                <rect key="frame" x="0.0" y="63" width="320" height="505"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="27W-Hg-Oe5" id="EtK-OE-Ymo"/>
+                                    <outlet property="delegate" destination="27W-Hg-Oe5" id="ESS-Wy-DbE"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yMa-FN-SYf" firstAttribute="leading" secondItem="OeA-04-WYg" secondAttribute="leading" constant="10" id="BZJ-VB-oqp"/>
+                            <constraint firstAttribute="trailing" secondItem="yMa-FN-SYf" secondAttribute="trailing" constant="10" id="M2N-Rk-iff"/>
+                            <constraint firstItem="Ois-MT-Y0I" firstAttribute="leading" secondItem="OeA-04-WYg" secondAttribute="leading" id="PvQ-oZ-K4Z"/>
+                            <constraint firstItem="Ois-MT-Y0I" firstAttribute="top" secondItem="yMa-FN-SYf" secondAttribute="bottom" constant="3" id="Zbv-Fo-vs8"/>
+                            <constraint firstItem="mcr-nj-oCa" firstAttribute="top" secondItem="Ois-MT-Y0I" secondAttribute="bottom" id="ekV-dO-Lzj"/>
+                            <constraint firstAttribute="trailing" secondItem="Ois-MT-Y0I" secondAttribute="trailing" id="w4p-PV-czg"/>
+                            <constraint firstItem="yMa-FN-SYf" firstAttribute="top" secondItem="F6g-m5-ETf" secondAttribute="bottom" constant="10" id="wWN-KZ-Ycf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IZ7-LF-991">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="brandSegment" destination="yMa-FN-SYf" id="nvq-Sh-hdk"/>
+                        <outlet property="obdListTable" destination="Ois-MT-Y0I" id="6iF-mH-uWW"/>
+                        <outlet property="obdListTableBottomHieght" destination="ekV-dO-Lzj" id="lM2-sv-l9M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nno-mr-vbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2612" y="-372"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Opf-oa-HWv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3iC-ks-X6k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WMy-GP-Co0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="27W-Hg-Oe5" kind="relationship" relationship="rootViewController" id="yqu-ku-wyN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eb0-MV-x9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2245" y="-372"/>
+        </scene>
+    </scenes>
+</document>

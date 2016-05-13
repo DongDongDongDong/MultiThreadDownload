@@ -1,0 +1,30 @@
+//
+//  PrefixHeader.pch
+//  MultiThreadDownload
+//
+//  Created by andylau on 16/5/13.
+//  Copyright © 2016年 andylau. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import "Util.h"
+#import "YXPconst.h"
+#endif
+
+
+#ifdef DEBUG
+# define AILog(format, ...) NSLog((@"[函数名:%s]" "[行号:%d]" format), __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define AILog(...)
+#endif
+
+
+#define AINoteCenter [NSNotificationCenter defaultCenter]
+#define SCREENWIDTH  [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+#define CONSTANT_THEME_COLOR_HDEX   0x2c88d3
+
+#endif /* PrefixHeader_pch */
